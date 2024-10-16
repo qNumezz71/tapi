@@ -156,7 +156,6 @@ endmacro(add_tapi_library)
 macro(add_tapi_executable name)
   add_llvm_executable(${name} ${ARGN})
   set_target_properties(${name} PROPERTIES FOLDER "Tapi executables")
-  target_link_options(${name} PRIVATE "-Wl,-no_exported_symbols")
 endmacro(add_tapi_executable)
 
 function(tapi_clang_tablegen)
